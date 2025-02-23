@@ -1,0 +1,162 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav a:hover {
+            background: #ddd;
+        }
+        form{
+            margin: 20PX;
+        }
+        footer{
+            background-color: #1f1f2b;
+            padding: 30px;
+        }
+        footer h2{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unmissable Event: Innovation & Music</h1>
+        <p>Join us for an extraordinary event featuring visionary entrepreneur Elon Musk and global music sensation Ed Sheeran.</p>
+    </header>
+    <nav>
+        <a href="#index.html">Home</a>
+        <a href="#details.html">Event Details</a>
+        <a href="#speakers.html">Speakers</a>
+        <a href="#register.html">Register</a>
+    </nav>
+    <section id="countdown">
+        <h2>Countdown to Event</h2>
+        <div id="timer"></div>
+    </section>
+    <script>
+        function countdownTimer() {
+            const eventDate = new Date("June 15, 2025 10:00:00").getTime();
+            setInterval(function () {
+                const now = new Date().getTime();
+                const timeLeft = eventDate - now;
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
+        }
+        countdownTimer();
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Event Details</h1>
+    </header>
+
+    <section id="details">
+        <h2>Event Details</h2>
+        <p><strong>Date:</strong> June 15, 2025</p>
+        <p><strong>Time:</strong> 10:00 AM - 5:00 PM</p>
+        <p><strong>Location:</strong> Central Auditorium, Parul University, Vadodara</p>
+    </section>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speakers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meet Our Speakers</h1>
+    </header>
+
+    <section id="speakers">
+        <div class="speaker">
+            <img src="Elon Musk.jpg" alt="Elon Musk">
+            <h3>Elon Musk</h3>
+            <p>CEO of Tesla & SpaceX - Shaping the Future of Technology</p>
+        </div>
+        <div class="speaker">
+            <img src="Ed Sheeran.jpg" alt="Ed Sheeran">
+            <h3>Ed Sheeran</h3>
+            <p>Grammy Award-Winning Artist - Live Performance</p>
+        </div>
+    </section>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Register Now</h1>
+    </header>
+
+    <section id="registration">
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <footer>
+        <h2>&copy; 2025 Event. All Rights Reserved.</h2>
+    </footer>
+</body>
+</html>
